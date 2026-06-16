@@ -25,7 +25,8 @@
 
         <button id="avion">
 
-            <img id="kitty"
+            <img
+            id="kitty"
             src="Diseño sin título.png"
             alt="Kitty">
 
@@ -40,11 +41,15 @@
 
         <div id="carta">
 
-            <img src="Querida Valeria.png" id="papel">
+            <img
+            src="Querida Valeria.png"
+            id="papel"
+            alt="Carta">
 
         </div>
 
     </div>
+
 
 
 <script>
@@ -76,11 +81,24 @@ boton.addEventListener("click", ()=>{
 
         indicacion.style.display = "none";
 
+
         carta.style.display = "flex";
+
+
+        // Baja automáticamente a la carta
+
+        carta.scrollIntoView({
+
+            behavior:"smooth",
+
+            block:"center"
+
+        });
 
         return;
 
     }
+
 
 
     // PRIMER CLICK
@@ -88,9 +106,12 @@ boton.addEventListener("click", ()=>{
 
     boton.disabled = true;
 
+
     boton.classList.add("palpitar");
 
+
     estado.textContent="Viajando... ✈️";
+
 
 
     setTimeout(()=>{
@@ -115,6 +136,7 @@ boton.addEventListener("click", ()=>{
 
 
     },2000);
+
 
 
 });
