@@ -169,6 +169,14 @@ button img{
 
     position:relative;
 
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
     animation:aparecer .8s ease;
 
 }
